@@ -9,6 +9,9 @@
       <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
       <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
       <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
       <title>Главная</title>
     </head>
 
@@ -21,10 +24,10 @@
             <section class="onlineshop-app__filter filter">
               <h2 class="title filter__title">Фильтр</h2>
               <p class="title filter__title">Укажите параметры</p>
-              <form class="filter__form" action="#" method="post">
+              <form class="filter__form js-filter" action="#" method="post">
                 <div class="filter__range">
                   <label for="sampleSlider">Цена, ₽</label>
-                  <input type="text" id="sampleSlider" />
+                  <input type="text" id="sampleSlider"/>
                 </div>
                 <div class="filter__estate">
                   <fieldset class="filter__type filter__type--estate">
@@ -39,7 +42,7 @@
                         <label for="flat">Квартира</label>
                       </li>
                       <li class="filter__checkboxes-item">
-                        <input class="visually-hidden" type="checkbox" name="estate-type" value="apartments" id="apartments">
+                        <input class="visually-hidden" type="checkbox" name="estate-type" value="apartment" id="apartments">
                         <label for="apartments">Апартаменты</label>
                       </li>
                     </ul>
@@ -89,16 +92,16 @@
                     <fieldset class="sorting__order">
                       <legend>Показать сначала:</legend>
                       <ul class="sorting__order-list">
-                        <li class="sorting__order-tab">
+                        <li class="sorting__order-tab sorting__popular">
                           <input class="visually-hidden" type="radio" name="sorting-order" value="popular" id="sort-popular" checked>
                           <label for="sort-popular">Популярные</label>
                         </li>
-                        <li class="sorting__order-tab">
+                        <li class="sorting__order-tab sorting__price">
                           <input class="visually-hidden" type="radio" name="sorting-order" value="cheap" id="sort-cheap">
                           <label for="sort-cheap">Дешёвые</label>
                         </li>
-                        <li class="sorting__order-tab">
-                          <input class="visually-hidden" type="radio" name="sorting-order" value="new" id="sort-new">
+                        <li class="sorting__order-tab sorting__date">
+                          <input class="visually-hidden" type="radio" name="sorting-order" value="cheap" id="sort-new">
                           <label for="sort-new">Новые</label>
                         </li>
                       </ul>
@@ -127,7 +130,6 @@
                     </svg>
                   </button>
                   <div class="product__image">
-                    <div class="product__image-more-photo hidden">+2 фото</div>
                     <img src="img/house_4.png" width="318" height="220" alt="Загородный дом с видом на озеро">
                   </div>
                   <div class="product__content">
@@ -146,7 +148,6 @@
                     </svg>
                   </button>
                   <div class="product__image">
-                    <div class="product__image-more-photo hidden">+2 фото</div>
                     <img src="img/item4.jpg" width="318" height="220" alt="1-комнатная квартира в центре Питера">
                   </div>
                   <div class="product__content">
@@ -234,8 +235,9 @@
           </div>
         </div>
       </section>
-
-      <script src="./js/rSlider.min.js"></script>
-      <script src="./js/main.js"></script>
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+      <script type="module" src="./js/main.js"></script>
     </body>
 </html>
